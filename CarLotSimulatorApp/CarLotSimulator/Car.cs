@@ -10,6 +10,11 @@ namespace CarLotSimulator
         public string EngineNoise { get; set; }
         public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
+        public Car()
+        {
+            CarLot.numberOfCars++;
+            Console.WriteLine($"Number of cars in CarLot: {CarLot.numberOfCars}");
+        }
         public void MakeEngineNoise(string noise)
         {
             Console.WriteLine($"{this.Model} Engine Noise = {noise}");
